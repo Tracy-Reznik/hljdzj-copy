@@ -1,31 +1,40 @@
-$(document).ready(()=>{
+$(document).ready(() => {
     console.log("hello world")
-    $("#logIn").click(()=>{
+    $("#logIn").click(() => {
         console.log("login")
         $("#login_dialog").modal("show")
     });
-    $(".nav-link").hover(function(){
+    $(".nav-link").hover(function () {
         console.log(1)
-        $(this).next().css("display","block");
-    },function(){
+        $(this).next().css("display", "block");
+    }, function () {
         console.log(2)
-        $(this).next().css("display","none");
+        $(this).next().css("display", "none");
     });
-    $(document).ready(function() {
-        var images = ["img/1eafd6f3db604c5396a384370ed32d40.jpg", "img/3bb", "url3"]; // 替换为你的图片URL
-        var index = 0;
-
-        function changeImage() {
-            var imageUrl = images[index];
-            $('.carousel-item').animate({
-                'margin-left': '-=' + $('.carousel-item').width()
-            }, 1000, function() {
-                $('.carousel-item').css('margin-left', 0);
-                $('.carousel-item').first().appendTo('#carousel');
-            });
-            index = (index + 1) % images.length; // 循环播放图片
-        }
-
-        setInterval(changeImage, 3000); // 每3秒更换一次图片
-    });
+    $(".topNews-list-box-tab").hover(function () {
+        $(".topNews-list-box-tab").removeClass("topNews-list-active")
+        $(this).addClass("topNews-list-active");
+    }, ()=>{})
 })
+$(document).ready(function () {
+    var $slides = $('#carousel .slide');
+    var currentSlide = 0;
+
+    function goToSlide(n) {
+        $slides.css('transform', 'translateX(' + (-n * 100) + '%)');
+        currentSlide = n;
+    }
+
+    $('#prevSlide').click(function () {
+        goToSlide((currentSlide - 1 + $slides.length) % $slides.length);
+    });
+
+    $('#nextSlide').click(function () {
+        goToSlide((currentSlide + 1) % $slides.length);
+    });
+
+    // Optional: Auto-play slides
+    setInterval(function () {
+        goToSlide((currentSlide + 1) % $slides.length);
+    }, 3000); // Change slide every 3 seconds
+});
