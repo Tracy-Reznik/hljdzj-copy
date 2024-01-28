@@ -13,10 +13,126 @@ body.index{
             background: url("../img/headerBg.jpg") no-repeat center;
             min-height: 300px;
             div.header-login{
-                width:100%;
-                height: 44px;
+                width: 1200px;
+                padding-top: 15px;
                 margin: 0 auto;
-                padding: 15px;;
+                color: rgb(255, 255, 255);
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                div.login-box {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 20px;
+                    a{
+                        color: white;
+                        text-decoration: none;
+                    }
+                    div.login-grap{
+                        width: 1px;
+                        height: 16px;
+                        background-color: rgb(255, 255, 255);
+                        margin: 0 5px;
+                    }
+                }
+                div.login-icon {
+                    width: 124px;
+                    height: 29px;
+                    background: none;
+                    border: 1px solid rgb(255, 255, 255);
+                    border-radius: 15px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .search{
+                    display: flex;
+                    align-items: center;
+                }
+                .search {
+                    /* width: 544px; */
+                    /* height: 75px; */
+                    display: flex;
+                    align-items: center;
+                    /* background: linear-gradient(105deg, transparent 20px, #7EB9FD 0); */
+                }
+
+                .search-box {
+                    width: 180px;
+                    height: 29px;
+                    margin-left: 30px;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                }
+
+                .search-img {
+                    width: 62px;
+                    height: 62px;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    background-image: url(../img/search.png);
+                    background-size: 62px 62px;
+                    background-repeat: no-repeat;
+                }
+
+                .input-groups {
+                    width: 100%;
+                    height: 100%;
+                    background: #ffffff;
+                    border-radius: 30px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .input-groups input {
+                    font-size: 12px;
+                }
+
+                .input-group-btn {
+                    display: flex;
+                    align-items: center;
+                    /* margin-left: 20px; */
+                }
+
+                .input-group-btn img {
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 10px;
+                }
+
+                .btn-search {
+                    margin-top: -2px;
+                    background-color: transparent;
+                    color: #EBEBEB;
+                }
+
+                .search .form-controls {
+                    height: 100%;
+                    background: transparent;
+                    border: none;
+                    color: #000000;
+                }
+                .form-controls::-webkit-input-placeholder {
+                    color: #9A9A9A;
+                }
+
+                .search>.search-box>.input-groups>.form-controls {
+                    width: 125px;
+                    flex: 0.85;
+                    margin-left: 15px;
+                }
+
+                .search>.search-box>.input-groups>.form-controls:focus {
+                    box-shadow: none;
+                }
+                input{
+                    outline: 0px;
+                    border: medium;
+                    font-family: "微软雅黑 Regular", "Microsoft YaHei", serif;
+                }
             }
         }
         nav{
@@ -29,9 +145,51 @@ body.index{
                 margin: 0 auto;
                 display: flex;
                 padding: 0;
+                list-style-type: none;
                 li{
                     height: 100%;
-                    width:calc(100% / 8);
+                    width:165px;
+                    text-align: center;
+                    position: relative;
+                    a.nav-link{
+                        width: 100%;
+                        display: inline-block;
+                        line-height: 60px;
+                        color: rgb(255, 255, 255);
+                        padding: 0;
+                        top:0;
+                        right:0;
+                        bottom:0;
+                        left:0;
+                        font-size: 22px;
+                        position:absolute;
+                        &:hover{
+                            background: #1ca8dd;
+                        }
+                    }
+                    .menu-list-title-son{
+                        border-top: 2px solid rgb(29, 163, 216);
+                        background: #1ca8dd;
+                        width: 165px;
+                        text-align: center;
+                        position: absolute;
+                        top: 60px;
+                        font-size: 18px;
+                        display: none;
+                        z-index: 99;
+                        a{
+                            content: "";
+                            background: #1ca8dd;
+                            display: inline-block;
+                            color: white;
+                            font-size: 18px;
+                            width: 165px;
+                            height: 40px;
+                            line-height: 40px;
+                            text-decoration: none;
+                            border-bottom: 1px dashed rgb(86, 192, 232);
+                        }
+                    }
                 }
             }
         }

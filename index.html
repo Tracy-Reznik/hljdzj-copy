@@ -13,11 +13,142 @@
     <body class="index">
         <header>
             <div class="header-img">
-                <div class="header-login"></div>
+                <div class="header-login">
+                    <div class="login-box">
+                        <a id="reg" class="login-btn cursor" href="/zc/zc.html" target="_blank" style="display: block;">注册</a>
+                        <a id="my" class="login-btn cursor" href="/grzx/grzx.html" target="_blank" style="display: none;">个人中心</a>
+                        <div class="login-grap"></div>
+                        <div id="logIn" class="login-btn cursor" style="display: block;" data-toggle="modal" data-target="#login_dialog">
+                            登录
+                        </div>
+                        <div id="logOut" class="login-btn cursor" onclick="logout()" style="display: none;">退出登录
+                        </div>
+                        <div class="login-grap"></div>
+                        <div class="login-btn cursor">
+                            <a id="wzayd" title="网站信息无障碍工具条" href="javascript:;" class="wzayd" accesskey="g">无障碍模式</a>
+                        </div>
+                        <div class="login-grap"></div>
+                    </div>
+                    <div class="login-icon">网站支持IPv6</div>
+                    <div class="search">
+
+                        <div class="search-box">
+                            <div class="input-groups">
+                                <form class="form-controls" name="myform1">
+                                    <input id="searchword" name="searchword" placeholder="请输入搜索内容">
+                                    <a id="ss" onclick="toSearch()" target="_blank"></a>
+                                </form>
+                                <a class="input-group-btn" id="ss" onclick="toSearch()" target="_blank">
+                                    <img src="img/search.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <nav>
-                <ul></ul>
+                <ul>
+                    <li>
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="index.html">新闻资讯</a>
+                        <div class="menu-list-title-son" style="display: none;">
+                            <a href="/fzjz/fzjz.html?id=fzjz&amp;hid=xwzx" target="_blank">综合信息</a>
+                            <a href="/gzdt/gzdt.html?id=gzdt&amp;hid=xwzx" target="_blank">行业动态</a>
+                            <a href="/zqsd/zqsd.html?id=zqsd&amp;hid=xwzx" target="_blank">震情速递</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="index.html">政务公开</a>
+                        <div class="menu-list-title-son" style="display: none;">
+                            <a href="/jggk/jggk.html?id=jggk&amp;hid=zwgk" target="_blank">机构概况</a>
+                            <a href="/ldzc/ldzc.html?id=ldzc&amp;hid=zwgk" target="_blank">领导之窗</a>
+                            <a href="/rsxx/rsxx.html?id=rsxx&amp;hid=zwgk" target="_blank">人事信息</a>
+                            <a href="/ysgk/ysgk.html?id=ysgk&amp;hid=zwgk" target="_blank">预算公开</a>
+                            <a href="/jsgk/jsgk.html?id=jsgk&amp;hid=zwgk" target="_blank">决算公开</a>
+                            <a href="/zcfg/zcfg.html?id=zcfg&amp;hid=zwgk" target="_blank">政策法规</a>
+                            <a href="/zcjd/zcjd.html?id=zcjd&amp;hid=zwgk" target="_blank">政策解读</a>
+                            <a href="/zxgk/zxgk.html?id=zxgk&amp;hid=zwgk" target="_blank">最新公开</a>
+                            <a href="/gkzn/gkzn.html?id=gkzn&amp;hid=zwgk" target="_blank">政府公开指南</a>
+                            <a href="/gkml/gkml.html?id=gkml&amp;hid=zwgk" target="_blank">政府公开目录</a>
+                            <a href="/gknb/gknb.html?id=gknb&amp;hid=zwgk" target="_blank">政府公开年报</a>
+                            <a href="/ysqgk/ysqgk.html?id=ysqgk&amp;hid=zwgk" target="_blank">依申请公开</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="index.html">服务办事</a>
+                        <div class="menu-list-title-son" style="display: none;">
+                            <a href="/zxfw.html?id=zxfw&amp;hid=fwbs" target="_blank">咨询服务</a>
+                            <a href="/wjxz/wjxz.html?id=wjxz&amp;hid=fwbs" target="_blank">文件下载</a>
+                            <a href="http://hlj.tzxm.gov.cn/tzxmindex;jsessionid=20B83BCDCB4458AEDDB842F90F542213#" target="_blank">服务办事</a>
+                            <a href="/fwtj/fwtj.html?id=fwtj&amp;hid=fwbs" target="_blank">服务办事统计</a>
+                            <a href="/jzxx/jzxx.html?id=jzxx&amp;hid=fwbs" target="_blank">局长信箱</a>
+                            <a href="/gzly/gzly.html?id=gzly&amp;hid=fwbs" target="_blank">公众留言</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="index.html">地震科普</a>
+                        <div class="menu-list-title-son" style="display: none;">
+                            <a href="/dzkp/dzkp.html?id=dzkp&amp;hid=dzkp" target="_blank">龙震之声</a>
+                            <a href="/fzpg/115/316125.html" target="_blank">防震减灾科普馆</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="index.html">党建工作</a>
+                    </li>
+                </ul>
             </nav>
+            <div class="modal fade" id="login_dialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" style="min-width: 700px;height: 446px">
+                    <div class="modal-content">
+                        <!-- 模态框头部 -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">用户登录</h4>
+                        </div>
+                        <!-- 模态框主体 -->
+                        <div class="modal-body">
+                            <form>
+                                <input id="loginUserName1" type="text" class="form-control" style="opacity: 0;position:absolute;width:0;height:0;">
+                                <input id="loginPassWord1" type="password" class="form-control" style="opacity: 0;position:absolute;width:0;height:0;">
+                                <p>
+                                    <label>用户名：</label>
+                                    <input id="loginUserName" type="text" class="form-control" placeholder="请输入账号" autocomplete="off">
+                                    <span class="modal-bitian">*必填</span>
+                                </p>
+                                <p>
+                                    <span class="modal-tishi">账号长度6~16位，必须含有数字和字母</span>
+                                </p>
+                                <p>
+                                    <label>密码：</label>
+                                    <input id="loginPassWord" type="password" class="form-control" placeholder="请输入密码" autocomplete="off">
+                                    <span class="modal-bitian">*必填</span>
+                                </p>
+                                <p>
+                                    <span class="modal-tishi">账号长度6~16位，必须含有数字和字母</span>
+                                </p>
+                                <p>
+                                    <label>验证码：</label>
+                                    <input id="loginCode" class="form-control" type="text">
+                                    <span class="modal-bitian2">
+                                        <img id="headerImg" class="cursor" width="84px" height="38px" src="data:image/png;base64,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" onclick="refreshImg('headerImg')">
+                                    </span>
+                                </p>
+                                <p>
+                                    <button type="button" class="btn btn-primary login-btns" onclick="loginCon()">
+                                        确认登录
+                                    </button>
+                                    <button type="button" class="btn btn-success login-btns" onclick="loginReg()">注册
+                                    </button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
+        <main>
+
+        </main>
     </body>
 </html>
