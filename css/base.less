@@ -386,6 +386,34 @@ body.index{
                 color: rgb(0, 86, 179);
             }
         }
+        div.news-box{
+            width: 100%;
+            padding: 40px 0;
+            background-color: rgb(244, 244, 244);
+            div.news{
+                width:1200px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                div.news-left {
+                    width: 600px;
+                    height: 437px;
+                    display: flex;
+                    .carousel-item {
+                        width: 600px;
+                        height: 437px;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
+                div.news-right {
+                    width: 572px;
+                    height: 437px;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
     }
 }
 /* index end */
